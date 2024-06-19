@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
@@ -60,5 +60,77 @@
     <div id="time"></div>
   </div>
   <script type="text/javascript" src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>mebm</title>
+  <style>
+    #header div {
+      color: white;
+      background-color: #6a0dad; /* Purple */
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+    #header div:hover {
+      background-color: #9b30ff; /* Lighter purple */
+    }
+    #header div:active {
+      background-color: rebeccapurple;
+    }
+    #header div span {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="background" class="full">
+    refresh if visible (javascript didn't load)
+    <input type="file" id="filepicker" multiple accept="video/mp4,video/x-m4v,video/*,image/*"/>
+  </div>
+  <div id="foreground" class="full">
+    <div id="cursor_preview">
+      <div></div>
+      <canvas></canvas>
+    </div>
+    <div id="canvas"></div>
+    <div id="layer_holder">
+      <div id="header">
+        <div onclick='upload()'>📁 <span>Import Media</span></div>
+        <div onclick='add_text()'>📝 <span>Text</span></div>
+        <div onclick='add_text()'>📝 <span>Content Library</span></div>
+        <div onclick='add_text()'>📝 <span>Templates</span></div>
+        <div onclick='add_text()'>📝 <span>Transitions</span></div>
+        <div onclick='updateSettings()'>⚙️ <span>[...]</span></div>
+        <div id="export">💾 <span>export</span></div>
+        <a href="https://clipmaker.io" target="_blank">Clipmaker.io</a>
+      </div>
+      <div id="layers"></div>
+    </div>
+    <div id="time"></div>
+  </div>
+
+  <script src="background.js"></script>
+  <script src="settings.js"></script>
+  <script src="export.js"></script>
+  <script src="renderedLayer.js"></script>
+  <script src="moveableLayer.js"></script>
+  <script src="imageLayer.js"></script>
+  <script src="textLayer.js"></script>
+  <script src="videoLayer.js"></script>
+  <script src="audioLayer.js"></script>
+  <script src="player.js"></script>
 </body>
 </html>
