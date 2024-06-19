@@ -713,7 +713,7 @@ class Player {
         <br>
         to start, drag in or paste URLs to videos and images.
         <br>
-        A live version can be found <a href="https://clipmaker.io" target="_blank">Clipmaker.io</a>
+        A live version can be found <a href="http://clipmaker.io" target="_blank">Clipmaker.io</a>
         and usage information <a href="https://github.com/alisrbdni/clipmaker#usage" target="_blank">here</a>.
         `;
       popup(text);

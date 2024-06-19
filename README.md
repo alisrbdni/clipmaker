@@ -2,7 +2,7 @@
 Online Video Editor
 
 
-[https://clipmaker.io](https://clipmaker.io)
+[http://clipmaker.io](http://clipmaker.io)
 
 
 Clipmaker is a browser based video editor .
