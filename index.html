@@ -7,6 +7,29 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <title>mebm</title>
+  <style>
+    #header div {
+      color: white;
+      background-color: #6a0dad; /* Purple */
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+    #header div:hover {
+      background-color: #9b30ff; /* Lighter purple */
+    }
+    #header div:active {
+      background-color: rebeccapurple;
+    }
+    #header div span {
+      margin-left: 5px;
+    }
+  </style>
 </head>
 <body>
   <div id="background" class="full">
@@ -21,11 +44,16 @@
     <div id="canvas"></div>
     <div id="layer_holder">
      <div id="header">
-      <div onclick='upload()'>+ media</div>
-      <div onclick='add_text()'>+ text</div>
-      <div onclick='updateSettings()'>[...]</div>
-      <div id="export">export</div>
-      <a href="https://github.com/bwasti/mebm" target="_blank">src</a>
+      <div onclick='upload()'>📁 <span>Import Media</span></div>
+      <div onclick='add_text()'>📝 <span>Text</span></div>
+
+      <div onclick='add_text()'>📝 <span>Content Library</span></div>
+      <div onclick='add_text()'>📝 <span>Templates</span></div>
+      <div onclick='add_text()'>📝 <span>Transitions</span></div>
+
+      <div onclick='updateSettings()'>⚙️ <span>[...]</span></div>
+      <div id="export">💾 <span>export</span></div>
+      <a href="https://github.com/alisrbdni/clipmaker" target="_blank">src</a>
      </div>
      <div id="layers"> </div>
     </div>
